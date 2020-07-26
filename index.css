@@ -16,7 +16,6 @@
 html, body {
     height: 100%;
     overflow: hidden;
-    /* background-color:; */
 }
 
 .mainContanier{
@@ -156,5 +155,42 @@ html, body {
     padding-right: 10px;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@media only screen and (max-width:550px){
+    .mainContanier{
+        background-image: url('./images/bg-mobile.png');
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .centerContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex-basis: 40%;
+    }
+    .optionsCard{
+        flex-basis: 70%;
+        justify-content: center;
+    }
+    .leftStorageCard{
+        border-radius: 15px;
+        left: 20%;
+        width: 60%;
+        top: 85%;
+    }
+    .leftStorageCard:before {
+        border: none;
+    }
+}
+.attribution { 
+    position: fixed;
+    font-size: 11px; 
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    color: var(--Grayish-Blue);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
